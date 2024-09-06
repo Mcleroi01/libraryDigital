@@ -14,6 +14,13 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <style>
+        #header {
+            border-radius: 0px 0px 100px 0px;
+            /* Top-left, top-right, bottom-right, bottom-left */
+        }
+    </style>
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
@@ -22,7 +29,9 @@
 
         <!-- Page Heading -->
         @isset($header)
-            <header class="bg-[#c5c7b0cb] dark:bg-gray-800 shadow rounded-bl-3xl">
+            <header class="bg-[#c5c7b0cb] relative dark:bg-gray-800 shadow  mb-96" id="header">
+
+
 
                 <nav
                     class="relative max-w-[66rem] w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -96,7 +105,7 @@
         @endisset
 
         <!-- Page Content -->
-        <main>
+        <main class="mt-80">
             {{ $slot }}
         </main>
     </div>
