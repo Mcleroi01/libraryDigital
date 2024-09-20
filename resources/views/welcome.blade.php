@@ -43,7 +43,7 @@
             </div>
 
             @foreach ($books as $book)
-                <div class=" flex">
+                <div class=" p-1 flex flex-wrap items-center justify-center">
 
 
                     <div
