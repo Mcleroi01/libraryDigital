@@ -1,156 +1,71 @@
-<div class="container flex flex-col mx-auto ">
-    <aside
-        class="group/sidebar flex flex-col shrink-0 lg:w-[300px] w-[250px] transition-all duration-300 ease-in-out m-0 fixed z-40 inset-y-0 left-0 bg-gray-100 sidenav fixed-start loopple-fixed-start"
-        id="sidenav-main">
-        <div class="flex shrink-0 px-8 items-center justify-between h-[96px]">
-            <a class="transition-colors duration-200 ease-in-out" href="https://www.loopple.com">
-                <img alt="Logo"
-                    src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/logos/loopple.svg"
-                    class="inline">
-            </a>
-        </div>
+   <!--Nav-->
+   <nav id="header" class="w-full z-30 top-0 py-1 sticky bg-white">
+       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
 
-        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
+           <label for="menu-toggle" class="cursor-pointer md:hidden block">
+               <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                   viewBox="0 0 20 20">
+                   <title>menu</title>
+                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+               </svg>
+           </label>
+           <input class="hidden" type="checkbox" id="menu-toggle" />
 
+           <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+               <nav>
+                   <ul class="md:flex items-center justify-between text-base text-black font-extrabold pt-4 md:pt-0">
+                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
+                               id="list" href="#">Acceuil</a></li>
+                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
+                               id="list" href="#">Mes Livres</a></li>
+                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
+                               id="list" href="#">Collection</a></li>
 
+                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
+                               id="list" href="#">En Vogue</a></li>
+                   </ul>
+               </nav>
+           </div>
 
-        <div class="hidden border-b border-dashed lg:block dark:border-neutral-700/70 border-neutral-200"></div>
-
-        <div class="relative pl-3 my-5 overflow-y-scroll">
-            <div class="flex flex-col w-full font-medium">
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex gap-2 items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <svg class="w-6 h-6 dark:text-neutral-400/75 text-stone-500" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path fill-rule="evenodd"
-                                d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Discovery</a>
-                    </span>
-                </div>
-
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex gap-2 items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <svg class="w-6 h-6 dark:text-neutral-400/75 text-stone-500" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path fill-rule="evenodd"
-                                d="M15 4H9v16h6V4Zm2 16h3a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3v16ZM4 4h3v16H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"
-                                clip-rule="evenodd" />
-                        </svg>
+           <div class="order-1 md:order-2">
+               <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+                   href="#">
+                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                       xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                       viewBox="0 0 24 24">
+                       <path
+                           d="M20 14h-2.722L11 20.278a5.511 5.511 0 0 1-.9.722H20a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1ZM9 3H4a1 1 0 0 0-1 1v13.5a3.5 3.5 0 1 0 7 0V4a1 1 0 0 0-1-1ZM6.5 18.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM19.132 7.9 15.6 4.368a1 1 0 0 0-1.414 0L12 6.55v9.9l7.132-7.132a1 1 0 0 0 0-1.418Z" />
+                   </svg>
 
 
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Categories</a>
-                    </span>
-                </div>
+                   Biblio<span class=" text-yellow-500 font-extrabold">Tech</span>
+               </a>
+           </div>
 
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex gap-2 items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <svg class="w-6 h-6 dark:text-neutral-400/75 text-stone-500" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z" />
-                        </svg>
+           <div class="order-2 md:order-3 flex items-center" id="nav-content">
 
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Mes
-                            Livres</a>
-                    </span>
-                </div>
+               @if (Route::has('login'))
+                   <nav class="-mx-3 flex flex-1 justify-end">
+                       @auth
+                           <a href="{{ url('/dashboard') }}"
+                               class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                               <img class="block mx-auto h-10 rounded-full sm:mx-0 sm:shrink-0" src="https://tailwindcss.com/img/erin-lindford.jpg" alt="Woman's Face">
+                           </a>
+                       @else
+                           <a href="{{ route('login') }}"
+                               class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                               Log in
+                           </a>
 
-                <div>
-                    <span
-                        class="select-none flex gap-2 items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <svg class="w-6 h-6 dark:text-neutral-400/75 text-stone-500" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z" />
-                        </svg>
-
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Mes
-                            Livres</a>
-                    </span>
-                </div>
-
-                <div>
-                    <span
-                        class="select-none flex gap-2 items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <svg class="w-6 h-6 dark:text-neutral-400/75 text-stone-500" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z" />
-                        </svg>
-
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Mes
-                            Livres</a>
-                    </span>
-                </div>
-
-                <!-- menu item -->
-                <div class="block pt-5 pb-[.15rem]">
-                    <div class="px-4 py-[.65rem]">
-                        <span
-                            class="font-semibold text-[0.95rem] uppercase dark:text-neutral-500/80 text-secondary-dark">Applications</span>
-                    </div>
-                </div>
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Users</a>
-                    </span>
-                </div>
-
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Orders</a>
-                    </span>
-                </div>
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Track
-                            Order</a>
-                    </span>
-                </div>
-
-                <!-- menu item -->
-                <div>
-                    <span
-                        class="select-none flex items-center px-4 py-[.775rem] cursor-pointer my-[.4rem] rounded-[.95rem]">
-                        <a href="javascript:;"
-                            class="flex items-center flex-grow text-[1.15rem] dark:text-neutral-400/75 text-stone-500 hover:text-dark">Products</a>
-                    </span>
-                </div>
-
-            </div>
-        </div>
-    </aside>
-</div>
+                           @if (Route::has('register'))
+                               <a href="{{ route('register') }}"
+                                   class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                   Register
+                               </a>
+                           @endif
+                       @endauth
+                   </nav>
+               @endif
+           </div>
+       </div>
+   </nav>
