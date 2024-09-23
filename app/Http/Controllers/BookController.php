@@ -29,9 +29,6 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-
-
-
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
@@ -51,7 +48,7 @@ class BookController extends Controller
 
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images', 'public'); 
+            $imagePath = $request->file('image')->store('images', 'public');
             $bookData['image_path'] = $imagePath;
         }
 
@@ -103,5 +100,11 @@ class BookController extends Controller
     {
         $book->delete();
         return redirect()->route('books.index');
+    }
+
+    public function readBook(Book $book)
+    {
+       return view('books.read',compact('book'));
+
     }
 }

@@ -16,7 +16,7 @@
     <div class=" grid grid-cols-1 bg-black gap-0.5 overflow-hidden  text-center sm:grid-cols-2 lg:grid-cols-4">
         <div class="flex flex-col bg-white/5 p-8">
             <dt class="text-sm font-semibold leading-6 text-gray-300"> de Livres Uploadés</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight text-white">12 million</dd>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-white">{{ $books->count() }}</dd>
         </div>
         <div class="flex flex-col bg-white/5 p-8">
             <dt class="text-sm font-semibold leading-6 text-gray-300">de Lecture</dt>
@@ -53,8 +53,8 @@
                         <div class="book-card">
                             <div class="book-card__book">
                                 <div class="book-card__book-front">
-                                    <img src="{{ asset('storage/' . $book->image_path) }}"
-                                        alt="{{ $book->title }}" class="object-cover w-full h-full" />
+                                    <img src="{{ asset('storage/' . $book->image_path) }}" alt="{{ $book->title }}"
+                                        class="object-cover w-full h-full" />
                                 </div>
                                 <div class="book-card__book-back"></div>
                                 <div class="book-card__book-side"></div>
@@ -76,11 +76,11 @@
                             </p>
                         </div>
                         <div class="p-6 pt-0">
-                            <button
+                            <a href="{{ route('book.readBook', $book->id) }}"
                                 class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block w-full bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
                                 type="button">
                                 Add to Cart
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

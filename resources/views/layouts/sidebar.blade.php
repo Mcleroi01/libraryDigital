@@ -14,8 +14,8 @@
            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
                <nav>
                    <ul class="md:flex items-center justify-between text-base text-black font-extrabold pt-4 md:pt-0">
-                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
-                               id="list" href="#">Acceuil</a></li>
+                       <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4 {{ request()->routeIs('welcome') ? ' text-yellow-500 ' : '' }}"
+                               id="list" href="{{route('welcome')}}">Acceuil</a></li>
                        <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
                                id="list" href="#">Mes Livres</a></li>
                        <li><a class="inline-block no-underline hover:text-yellow-500 hover:underline py-2 px-4"
