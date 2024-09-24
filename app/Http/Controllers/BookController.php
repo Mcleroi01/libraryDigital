@@ -102,9 +102,5 @@ class BookController extends Controller
         return redirect()->route('books.index');
     }
 
-    public function readBook(Book $book)
-    {
-       return view('books.read',compact('book'));
-
-    }
+    
 }

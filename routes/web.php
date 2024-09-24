@@ -18,10 +18,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/books/{id}/read', [ReadController::class, 'readBook'])->name('books.read');
+    Route::post('/books/{id}/update-progress', [ReadController::class, 'updateProgress'])->name('books.updateProgress');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/read/{id}', [BookController::class, 'readBook'])->name('book.readBook');
     Route::post('/pdf/save', [ReadController::class, 'saveCurrentPage'])->name('savePage');
     Route::resource('books', BookController::class);
     Route::resource('tags', TagController::class);

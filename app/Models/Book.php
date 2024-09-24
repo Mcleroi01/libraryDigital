@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Book extends Model
 {
@@ -24,8 +25,8 @@ class Book extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-    public function categories()
+    public function categorie(): BelongsTo
     {
-        return $this->belongsToMany(Categorie::class);
+        return $this->belongsTo(Categorie::class);
     }
 }

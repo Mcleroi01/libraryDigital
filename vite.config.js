@@ -7,6 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'node_modules/epubjs/dist/epub.min.js'
             ],
             refresh: true,
         }),

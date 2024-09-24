@@ -13,20 +13,20 @@
     </x-slot>
 
 
-    <div class=" grid grid-cols-1 bg-black gap-0.5 overflow-hidden  text-center sm:grid-cols-2 lg:grid-cols-4">
-        <div class="flex flex-col bg-white/5 p-8">
-            <dt class="text-sm font-semibold leading-6 text-gray-300"> de Livres Uploadés</dt>
+    <div class=" grid grid-cols-1 bg-black gap-0.5 overflow-hidden  text-center sm:grid-cols-2 lg:grid-cols-4" >
+        <div class="flex flex-col bg-white/5 p-8" data-aos="zoom-out-right">
+            <dt class="text-sm font-semibold leading-6 text-gray-300" > de Livres Uploadés</dt>
             <dd class="order-first text-3xl font-semibold tracking-tight text-white">{{ $books->count() }}</dd>
         </div>
-        <div class="flex flex-col bg-white/5 p-8">
+        <div class="flex flex-col bg-white/5 p-8" data-aos="zoom-out-right">
             <dt class="text-sm font-semibold leading-6 text-gray-300">de Lecture</dt>
             <dd class="order-first text-3xl font-semibold tracking-tight text-white">10 000 Heures</dd>
         </div>
-        <div class="flex flex-col bg-white/5 p-8">
+        <div class="flex flex-col bg-white/5 p-8" data-aos="zoom-out-right">
             <dt class="text-sm font-semibold leading-6 text-gray-300">de Lectures</dt>
             <dd class="order-first text-3xl font-semibold tracking-tight text-white">6 600 Recommandations</dd>
         </div>
-        <div class="flex flex-col bg-white/5 p-8">
+        <div class="flex flex-col bg-white/5 p-8" data-aos="zoom-out-right">
             <dt class="text-sm font-semibold leading-6 text-gray-300">2 100 Utilisateurs</dt>
             <dd class="order-first text-3xl font-semibold tracking-tight text-white">Actifs</dd>
         </div>
@@ -34,20 +34,17 @@
 
     <div class=" p-2 lg:p-10">
         <div class=" mx-auto">
-            <div class="block mb-4 mx-auto border-b border-slate-300 pb-2 ">
+            <div class="block mb-4 mx-auto border-b border-slate-300 pb-2 " data-aos="zoom-out-right">
                 <a target="_blank" href="https://www.material-tailwind.com/docs/html/card"
                     class="block w-full px-4 py-2  text-slate-700 transition-all">
                     Découvrez un vaste monde de livres numériques à portée de main, <b>Que vous soyez passionné de
                         littérature classique, de thrillers captivants ou de guides pratiques</b>.
                 </a>
             </div>
-
-            @foreach ($books as $book)
-                <div class=" p-1 flex flex-wrap items-center justify-center">
-
-
-                    <div
-                        class="flex flex-col justify-center items-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full lg:w-96">
+            <div class=" p-1 flex flex-wrap gap-8  justify-center">
+                @foreach ($books as $book)
+                    <div data-aos="zoom-out-right"
+                        class="headline flex flex-col justify-center items-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-full lg:w-96">
 
 
                         <div class="book-card">
@@ -76,15 +73,15 @@
                             </p>
                         </div>
                         <div class="p-6 pt-0">
-                            <a href="{{ route('book.readBook', $book->id) }}"
+                            <a href="{{ route('books.read', $book->id) }}"
                                 class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block w-full bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
                                 type="button">
                                 Add to Cart
                             </a>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 </x-guest-layout>
